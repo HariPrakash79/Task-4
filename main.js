@@ -1,12 +1,12 @@
 var request = new XMLHttpRequest();
 
-request.open('GET','https://restcountries.com/v3/all', true);
+request.open('GET','https://restcountries.eu/rest/v2/all', true);
 
 request.send();
 
 request.onload = function(){
 
-    var data = JSON.parse(request.response);//request from server
+    var data = JSON.parse(request.response);/
     console.log(data);
 
     for ( var i=0; i<data.length; i++){
